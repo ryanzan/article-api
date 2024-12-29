@@ -8,6 +8,4 @@ const app = new App();
 app.addRoutes([{ path: '/', router: Api }]);
 
 // Start the server
-app.app.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
-});
+app.listen(PORT);
