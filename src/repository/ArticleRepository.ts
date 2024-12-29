@@ -1,6 +1,6 @@
 import PostgreSQLService from "../service/PostgreSQLService";
 import {Pool} from "pg";
-import {Article} from "../type/Article";
+import {Article} from "../types/Article";
 export default class ArticleRepository{
     private db: PostgreSQLService;
 

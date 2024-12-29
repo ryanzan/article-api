@@ -6,6 +6,7 @@ const  ERROR_UPLOADING_FILE = 'Error uploading file';
 const FILE_UPLOADED = 'File uploaded successfully';
 const RESOURCE_NOT_FOUND = 'Resource not found';
 const UNSUPPORTED_FILE_TYPE= 'Unsupported file type';
+const INVALID_CREDENTIALS = 'Invalid credentials';
 export {
     CONNECTED_POSTGRESQL_DB,
     ERROR_ESTABLISHING_POSTGRESQL_CONNECTION,
@@ -14,5 +15,6 @@ export {
     ERROR_UPLOADING_FILE,
     FILE_UPLOADED,
     RESOURCE_NOT_FOUND,
-    UNSUPPORTED_FILE_TYPE
+    UNSUPPORTED_FILE_TYPE,
+    INVALID_CREDENTIALS
 }

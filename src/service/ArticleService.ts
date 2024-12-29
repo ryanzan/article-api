@@ -1,6 +1,6 @@
 import ArticleValidator from "../validators/ArticleValidator";
 import ArticleRepository from "../repository/ArticleRepository";
-import {Article} from "../type/Article";
+import {Article} from "../types/Article";
 import MediaService from "./MediaService";
 import {Logger} from "../utils/logger";
 
@@ -46,8 +46,8 @@ export default class ArticleService {
             title,
             content,
             image_path: image_path,
-            created_by: 1,
-            updated_by: 1
+            created_by: data.user.id,
+            updated_by: data.user.id
         }
         return await this.repository.storeArticle(article);
     }
@@ -78,8 +78,8 @@ export default class ArticleService {
             title,
             content,
             image_path: image_path,
-            created_by: 1,
-            updated_by: 1
+            created_by: oldArticle.created_by,
+            updated_by: data.user.id
         }
         return await this.repository.updateArticle(article);
     }
