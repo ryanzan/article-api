@@ -10,21 +10,21 @@ export default class ArticleController {
 
     public async getArticles(req: Request, res: Response):  Promise<void> {
         const result = await this.articleService.getArticles();
-        res.send(result);
+        res.json(result);
     }
 
     public async getArticleById(req: Request, res: Response):  Promise<void> {
         const id: string = req.params.id;
         const result = await this.articleService.getArticleById(id);
-        res.send(result);
+        res.json(result);
     }
 
     public async storeArticle(req: Request, res: Response):  Promise<void> {
         try {
             const result = await this.articleService.storeArticle(req.body);
-            res.status(201).send(result);
+            res.status(201).json(result);
         } catch (error: any) {
-            res.status(400).send({ error: error.message });
+            res.status(400).json({ error: error.message });
         }
     }
 
@@ -32,15 +32,15 @@ export default class ArticleController {
         try {
             const id: number = parseInt(req.params.id);
             const result = await this.articleService.updateArticle(id, req.body);
-            res.status(200).send(result);
+            res.status(200).json(result);
         } catch (error: any) {
-            res.status(400).send({ error: error.message });
+            res.status(400).json({ error: error.message });
         }
     }
 
     public async deleteArticle(req: Request, res: Response): Promise<void> {
         const id: number = parseInt(req.params.id);
         const result = await this.articleService.deleteArticle(id);
-        res.send(result);
+        res.json(result);
     }
 }
