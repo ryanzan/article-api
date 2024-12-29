@@ -32,7 +32,7 @@ export default class ArticleRepository{
         return data.rows;
     }
 
-    public async getArticleById(id: string): Promise<Article>{
+    public async getArticleById(id: number): Promise<Article>{
         const sql = 'SELECT * FROM articles WHERE id = $1;'
         const data = await this.db.query(sql, [id]);
         return data.rows[0];
