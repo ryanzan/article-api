@@ -21,6 +21,9 @@ A simple application for CRUD operations of article.
 4. **Access the application:**
    ```bash
    http://localhost:3000
+   Use the following username and password:
+   username: ranjan
+   password: password
    ```
 5. **Access the API documentation:**
    ```bash
